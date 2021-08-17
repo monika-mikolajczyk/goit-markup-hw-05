@@ -267,7 +267,47 @@ color: #757575;
 color:#FFFFFF;
 }
 
+.portfolio-img {
+  position: relative;
+  overflow: hidden;
+}
 
+.overlay {
+  background-color: rgba(33, 150, 243, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  padding: 49px 45px 49px 24px ;
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 1.555;
+  letter-spacing: 0.03em;
+}
+.options_images_list_item:hover .overlay,
+.options_images_list_item:focus .overlay,
+.options_images_list_item:hover .overlay,
+.options_images_list_item:focus .overlay {
+  transform: translateY(0);
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.description {
+  padding: 15px 24px 20px 24px;
+  border: 1px solid #eeeeee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.options_images_project {
+  margin: 0;
+
+}
 
 /* ----- homework-3_style-geometrii ----- */
 
@@ -559,8 +599,6 @@ box-sizing: border-box;
 .options_images_project {
 padding-top: 20px;
 padding-bottom: 4px;
-padding-left: 24px;
-padding-right: 24px;
 }
 
 .options_images_name {
