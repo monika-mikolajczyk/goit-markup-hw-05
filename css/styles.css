@@ -54,8 +54,14 @@ cursor: pointer;
 }
 .navigation-list-link:hover {
 color: #2196F3;
+transition-property: background-color, fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation-list-link:focus {
+transition-property: background-color, fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 color: #2196F3;
 }
 
@@ -216,6 +222,9 @@ cursor: pointer;
 background-color: #2196F3;
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 border-radius: 4px;
+transition-property: background-color, fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
 .options_images_project {
@@ -503,10 +512,16 @@ border: 0;
 .option_list_name_link:hover {
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 border-radius: 4px;
+transition-property: background-color, fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 } 
 .option_list_name_link:focus {
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 border-radius: 4px;
+transition-property: background-color, fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* SEKCJA OPTIONS_IMAGES */
@@ -584,9 +599,13 @@ display: flex;
 text-decoration: none;
 }
 
-.adress_email_telefon:hover {
+.adress_email_telefon:hover,
+.adress_email_telefon:focus {
 color: #2196F3;
 fill: #2196F3;
+transition-property: background-color, fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon_envelope {
@@ -639,6 +658,9 @@ display: block;
 .social_list__link:focus {
 fill: #fff;
 background-color: var(--main-color);
+transition-property: background-color, fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* section customers 4 zadanie */
@@ -678,6 +700,9 @@ height: 60px;
 .our_customers_list_item:focus {
 fill: var(--main-color);
 border-color: var(--main-color);
+transition-property: background-color, fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* footer 4 zadanie */
@@ -738,11 +763,71 @@ display: block;
 .follow_us_icon:focus {
 fill: #fff;
 background-color: var(--main-color);
+transition-property: background-color, fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* portfolio 4 zadanie */
 
-.options_images_list_item:hover {
+.options_images_list_item:hover,
+.options_images_list_item:focus {
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 cursor: pointer;
+transition-property: background-color, fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 } 
+
+/* na końcu index.html  */
+
+
+.backdrop{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.is-hidden .modal{
+   transform: translate(-200%,-200%);
+}
+
+.modal{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color: var(--third-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 528px;
+  height: 581px;
+  transition: transform 1s ease-out;
+}
+
+.close-btn{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--third-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.is-hidden{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.close-modal-btn{
+  position:absolute;
+  left:9px;
+  top:9px;
+}
