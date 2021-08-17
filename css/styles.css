@@ -65,6 +65,20 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 color: #2196F3;
 }
 
+.navigation-list-link current::after
+{
+  content:"";
+  display: block;
+  width: 53px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  top:45px;
+  border-radius: 2px;
+  left:2px;
+}
+
+
 .adress_email_telefon {
 text-decoration: none;
 font-family: "Roboto";
@@ -793,7 +807,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 .is-hidden .modal{
    transform: translate(-200%,-200%);
-}
+}Dla wszystkich efektów najechania kursorem i focusu (kolor, tło, cień) wykonywany jest transition. Czas - 250ms, funkcja rozkładu czasu - cubic-bezier(0.4, 0, 0.2, 1).
 
 .modal{
   position: absolute;
