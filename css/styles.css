@@ -86,7 +86,6 @@ color: var(--secondary-color);
   left:2px;
 }
 
-
 .adress_email_telefon {
 text-decoration: none;
 font-family: "Roboto";
@@ -851,17 +850,10 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.is-hidden .modal {
+.is-hidden {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  background-color: var(--third-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  width: 528px;
-  min-height: 581px;
-  transition: transform 1s ease-out;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .modal {
@@ -872,6 +864,13 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--third-color);
   width: 528px;
   min-height: 581px;
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: var(--third-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 1s ease-out;
 }
 
 .close-btn{
@@ -884,12 +883,6 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
-}
-
-.is-hidden{
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 
 .close-modal-btn{
