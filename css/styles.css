@@ -30,6 +30,7 @@ url('../images/background.jpg');
 object-fit: contain;
 padding-top: 200px;
 padding-bottom: 200px;
+background-size: cover;
 }
 
 .slogan {
@@ -427,24 +428,19 @@ margin: auto;
 }
 
 .modal-btn {
-padding-top: 10px;
-padding-bottom: 10px;
-padding-right: 40px;
-padding-left: 40px;
-margin: auto;
+padding: 17px 40px 17px 40px;
+margin: 0 auto;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
-text-transform: none;
-justify-content: center;
 border: 0;
   font-family: "Roboto";
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  display: flex;
+  display: block;
   text-align: center;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
+  text-transform: none;
   background-color: #2196F3;   
   color: #ffffff;
   cursor: pointer;
@@ -860,7 +856,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 1s ease-out;
 }
 
-.close-btn{
+.close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -872,8 +868,8 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 
-.close-modal-btn{
-  position:absolute;
-  left:9px;
-  top:9px;
+.close-modal-btn {
+  position: absolute;
+  left: 9px;
+  top: 9px;
 }
