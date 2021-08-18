@@ -23,11 +23,13 @@ color: #2196F3;
 color: black;
 }
 
-.slogan_background {
+.hero {
 background-color:rgba(47, 48, 58, 0.4);
 background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), 
 url('../images/background.jpg');
 object-fit: contain;
+padding-top: 200px;
+padding-bottom: 200px;
 }
 
 .slogan {
@@ -99,23 +101,6 @@ color: #757575;
 
 .adress_email_telefon:active{
 text-decoration: underline;    
-}
-
-.modal-btn {
-font-family: "Roboto";
-font-style: normal;
-font-weight: bold;
-font-size: 16px;
-line-height: 30px;
-/* identical to box height, or 187% */  
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: 0.06em;
-text-transform: uppercase;
-background-color: #2196F3;   
-color: #ffffff;
-cursor: pointer;
 }
 
 .why_us_list_name {
@@ -304,7 +289,9 @@ color:#FFFFFF;
 
 .description {
   padding: 15px 24px 20px 24px;
-  border: 1px solid #eeeeee;
+  border-bottom: 1px solid var(--third-color);
+  border-left: 1px solid var(--third-color);
+  border-right: 1px solid var(--third-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -427,32 +414,41 @@ display: flex;
 
 /* SLOGAN + BUTTON */
 
-.slogan_background .container {
-width: 1200px;
-height: 600px;
+.hero .container {
+max-width: 1200px;
+padding-top: 80px;
+padding-bottom: 94px;
 align-items: center;
 }
 
 .slogan {
-width: 696px;
-padding-top: 200px;
+padding-bottom: 30px;
 margin: auto;
 }
 
 .modal-btn {
+padding-top: 10px;
+padding-bottom: 10px;
+padding-right: 40px;
+padding-left: 40px;
 margin: auto;
-width: 200px;
-height: 50px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
 text-transform: none;
 justify-content: center;
 border: 0;
-}
-
-.modal-btn-class {
-padding-top: 30px;
-}
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background-color: #2196F3;   
+  color: #ffffff;
+  cursor: pointer;
+  }
 
 /* SEKCJA WHY US */
 
@@ -486,20 +482,18 @@ position: relative;
 }
 
 
-.inside-text {
-  position: absolute;
-  width: 100%;
-  background: rgba(47, 48, 58, 0.8);
-  padding: 27px 0;
-  bottom: 0;
-}
-
 .about-info-text {
+  padding: 27px 0;
+  width: 100%;
   font-size: 14px;
   letter-spacing: 0.3px;
   text-align: center;
   text-transform: uppercase;
-  color: #fff;
+  color: #fff; 
+  position: absolute;
+  width: 100%;
+  background: rgba(47, 48, 58, 0.8);
+  bottom: 0;
 }
 
 /* SEKCJA OUR TEAM */
@@ -576,6 +570,7 @@ border-radius: 4px;
 transition-property: background-color, fill;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+color: #fff;
 } 
 .option_list_name_link:focus {
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -596,8 +591,7 @@ justify-content: space-between;
 margin-top: -30px;
 }
 
-.options_images_list_item 
-{
+.options_images_list_item {
 margin-top: 30px;
 border: 1px solid #EEEEEE;
 box-sizing: border-box;
@@ -606,12 +600,6 @@ box-sizing: border-box;
 .options_images_project {
 padding-top: 20px;
 padding-bottom: 4px;
-}
-
-.options_images_name {
-padding-bottom: 20px;
-padding-left: 24px;
-padding-right: 24px;;
 }
 
 /* why us 4 zadanie */
@@ -728,7 +716,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 list-style-type: none;
 display: flex;
 align-items: center;
-justify-content: space-between;
+column-gap: 30px;
 }
 
 .our_customers_list {
